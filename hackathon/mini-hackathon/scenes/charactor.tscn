@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2n8erlb0udu7"]
+
+[ext_resource type="Script" uid="uid://3e0q31rxlst4" path="res://scripts/charactor.gd" id="1_o2d2m"]
+[ext_resource type="Texture2D" uid="uid://dlefp2yt84il2" path="res://assets/SenseiPack_1080p_PNG/char3/sf2g_sensei_normal.png" id="1_vb3bd"]
+[ext_resource type="Texture2D" uid="uid://cttgaxifnen3c" path="res://assets/SenseiPack_1080p_PNG/char3/sf2g_sensei_normaltalk.png" id="2_o2d2m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ffhwa"]
+atlas = ExtResource("1_vb3bd")
+region = Rect2(0, 0, 360, 750)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vvkt"]
+atlas = ExtResource("2_o2d2m")
+region = Rect2(0, 0, 360, 750)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cmwa2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ffhwa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vvkt")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
+
+[node name="charactor" type="Node2D"]
+script = ExtResource("1_o2d2m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 0)
+sprite_frames = SubResource("SpriteFrames_cmwa2")
+animation = &"idle"
