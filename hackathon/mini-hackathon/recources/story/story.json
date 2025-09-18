@@ -1,0 +1,60 @@
+[
+	{"speaker" : "Liz" , "text" : "Yawn "}, 
+	{"speaker" : "Liz" , "text" : "good morning , wake up from your bed"},
+	{"speaker" : "Liz" , "text" : "are you redy for you adventure ?"},
+	
+	{"speaker" : "Liz" , "text" : "Today you are going to the play ground."}, 
+	{"speaker" : "Liz" , "text" : "But we only have one problem"},
+	{"anchor" : "bed"},
+	{"speaker" : "Liz" , "text" : "Today is a very sunny day,"},
+	{"speaker" : "Liz" , "text" : "Which means it will get very hot."},
+	{"speaker" : "Liz" , "text" : "Do you wnat to take your cap with you ?"},
+	{"choices" :
+		[
+			{"text" : "Yes", "goto": "Yes"},
+			{"text" : "No", "goto": "No"}
+		] 
+	},
+	
+	{"anchor" : "Yes"},
+	{"speaker" : "Liz" , "text" : "Greate job. Let's go to the wardrobe to take it"},
+	{"goto" : "wardrobe"},
+	
+	{"anchor" : "No"},
+	{"speaker" : "Liz" , "text" : "Oh no"},
+	{"speaker" : "Liz" , "text" : "that was the wrong choice..."},
+	{"speaker" : "Liz" , "text" : "explaination , explaination"},
+	{"speaker" : "Liz" , "text" : "let's make the choice again"},
+	{"goto" : "bed"},
+
+	
+	{"anchor" : "wardrobe"},
+	{"speaker" : "Liz" , "text" : "I'm gald you decide to go with the correct choice "},
+	{"speaker" : "Liz" , "text" : "Wait..."},
+	{"anchor" : "wardrobe2"},
+	{"speaker" : "Liz" , "text" : "What are we looking for again?"},
+	{"choices" :
+		[
+			{"text" : "jacket", "goto": "jacket"},
+			{"text" : "Umbrella", "goto": "Umbrella"},
+			{"text" : "cap", "goto": "cap"}
+		] 
+	},
+	
+	{"anchor" : "cap"},
+	{"speaker" : "Liz" , "text" : "Greate job. Let's go to the kitchen"},
+	{"goto" : "kitchen"},
+	
+	{"anchor" : "Umbrella"},
+	{"speaker" : "Liz" , "text" : "oh no bad choice"},
+	{"goto" : "wardrobe2"},
+	
+	{"anchor" : "jacket"},
+	{"speaker" : "Liz" , "text" : "oh no bad choice"},
+	{"goto" : "wardrobe2"},
+	
+	{"anchor" : "kitchen"},
+	{"speaker" : "Liz" , "text" : "yay you at the kitchen."},
+	{"speaker" : "Liz" , "text" : "Today you are going to the play groung."},
+
+]

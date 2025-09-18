@@ -1,15 +1,40 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://be30jivswtenc"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://be30jivswtenc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ux8hm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx7ni"]
+bg_color = Color(0.129412, 0.407843, 0.690196, 0.666667)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.345007, 0.565955, 0.916052, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm5n4"]
+bg_color = Color(0.129412, 0.407843, 0.690196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4svv"]
+bg_color = Color(0.129412, 0.407843, 0.690196, 0.635294)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gw00"]
+bg_color = Color(0.129412, 0.407843, 0.690196, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n58gf"]
 content_margin_left = 40.0
 content_margin_top = 20.0
 content_margin_right = 40.0
 content_margin_bottom = 20.0
-bg_color = Color(0.397685, 0.594248, 0.949248, 0.34902)
+bg_color = Color(0.239684, 0.557539, 0.904237, 0.415686)
 border_width_top = 4
 border_color = Color(0.815686, 0.764706, 0.976471, 1)
 
 [resource]
+Button/font_sizes/font_size = 30
+Button/styles/disabled = SubResource("StyleBoxFlat_ux8hm")
+Button/styles/focus = SubResource("StyleBoxFlat_nx7ni")
+Button/styles/hover = SubResource("StyleBoxFlat_jm5n4")
+Button/styles/normal = SubResource("StyleBoxFlat_w4svv")
+Button/styles/pressed = SubResource("StyleBoxFlat_4gw00")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_n58gf")
 RichTextLabel/font_sizes/bold_italics_font_size = 28
 RichTextLabel/font_sizes/normal_font_size = 26
