@@ -1,4 +1,6 @@
 extends Node2D
+
+@onready var background = %Background
 @onready var charactor = %charactor
 @onready var dialogUi = %DialogUI
 
@@ -35,6 +37,20 @@ func _input(event: InputEvent) -> void:
 	
 func process_current_line():
 	var line = dialog_lines[dialog_index]
+	#check if it's the end of the scene
+	if line.has("next_scene"):
+		return
+	
+	
+	#chack if we need to change location
+	if line.has("location"):
+		var background_file = "res://assets/ai_gen_boy/" + line["location"] + ".png"
+		background.texture = load(background_file)
+		dialog_index += 1
+		process_current_line()
+		return
+	
+	
 	#check if line has 'goto'
 	if line.has("goto") :
 		dialog_index = get_anchor_position(line["goto"])

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cgb0a75xk0tuh" path="res://scripts/mainscene.gd" id="1_qklmv"]
 [ext_resource type="PackedScene" uid="uid://c2n8erlb0udu7" path="res://scenes/charactor.tscn" id="2_4dvvg"]
-[ext_resource type="Texture2D" uid="uid://r446d6ob33gt" path="res://assets/ai gen boy/boy_wakes_up.png" id="2_qklmv"]
+[ext_resource type="Texture2D" uid="uid://r446d6ob33gt" path="res://assets/ai_gen_boy/boy_wakes_up.png" id="2_qklmv"]
 [ext_resource type="PackedScene" uid="uid://b8rwx5ojxdkuy" path="res://scenes/dialog_ui.tscn" id="3_rnjyy"]
 
 [node name="MainScene" type="Node2D"]
@@ -11,7 +11,8 @@ script = ExtResource("1_qklmv")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

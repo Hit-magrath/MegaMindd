@@ -1,14 +1,24 @@
 [
-	{"speaker" : "Liz" , "text" : "Yawn "}, 
-	{"speaker" : "Liz" , "text" : "good morning , wake up from your bed"},
-	{"speaker" : "Liz" , "text" : "are you redy for you adventure ?"},
+	{"location" : "boy_wakes_up"},
+	{"speaker" : "Liz" , "text" : " Yawn "}, 
+	{"speaker" : "Liz" , "text" : " Good morning, Thabo!"},
+	{"speaker" : "Liz" , "text" : " The sun is shining brightly today. It looks like it's going to be a very hot day, perfect for playing outside!"},
+	{"speaker" : "Liz" , "text" : " But remember, when the sun is this strong, it's important to keep cool and protect ourselves from its warm rays."},
+	{"speaker" : "Liz" , "text" : " We want to avoid getting too hot or getting a sunburn."},
+	{"next_scene" : "bed" , "transition" : "fade"},
 	
-	{"speaker" : "Liz" , "text" : "Today you are going to the play ground."}, 
-	{"speaker" : "Liz" , "text" : "But we only have one problem"},
-	{"anchor" : "bed"},
-	{"speaker" : "Liz" , "text" : "Today is a very sunny day,"},
-	{"speaker" : "Liz" , "text" : "Which means it will get very hot."},
-	{"speaker" : "Liz" , "text" : "Do you wnat to take your cap with you ?"},
+	
+	
+	
+	
+	
+	
+	
+	{"location" : "bed"},
+	{"speaker" : "Liz" , "text" : " Today's task is a fun one: you get to go to the playground!"}, 
+	{"speaker" : "Liz" , "text" : " But first, a quick decision."},
+	{"anchor" : "cap_question"},
+	{"speaker" : "Liz" , "text" : " Do you want to take your cap with you to the playground today?"},
 	{"choices" :
 		[
 			{"text" : "Yes", "goto": "Yes"},
@@ -17,44 +27,205 @@
 	},
 	
 	{"anchor" : "Yes"},
-	{"speaker" : "Liz" , "text" : "Greate job. Let's go to the wardrobe to take it"},
+	{"speaker" : "Liz" , "text" : " Great idea, Let's head to your dressing area to find it."},
+	{"next_scene" : "wardrobe" , "transition" : "fade"},
 	{"goto" : "wardrobe"},
 	
 	{"anchor" : "No"},
-	{"speaker" : "Liz" , "text" : "Oh no"},
-	{"speaker" : "Liz" , "text" : "that was the wrong choice..."},
-	{"speaker" : "Liz" , "text" : "explaination , explaination"},
-	{"speaker" : "Liz" , "text" : "let's make the choice again"},
-	{"goto" : "bed"},
-
+	{"speaker" : "Liz" , "text" : " Hmm, let's think about that."},
+	{"speaker" : "Liz" , "text" : " When the sun is very hot, it can make our heads feel warm and even hurt our eyes"},
+	{"speaker" : "Liz" , "text" : " A cap helps by shading your head and face,"},
+	{"speaker" : "Liz" , "text" : " keeping you cooler and protecting you from the sun's strong rays."},
+	{"speaker" : "Liz" , "text" : " It's also a good idea to wear sunscreen on any skin that isn't covered"},
+	{"speaker" : "Liz" , "text" : " like your arms and legs, to prevent sunburn."},
+	{"speaker" : "Liz" , "text" : " Maybe we should reconsider the cap for a sunny day like this! "},
+	{"goto" : "cap_question"},
+	
+	
+	
+	
+	
+	
+	
 	
 	{"anchor" : "wardrobe"},
-	{"speaker" : "Liz" , "text" : "I'm gald you decide to go with the correct choice "},
-	{"speaker" : "Liz" , "text" : "Wait..."},
+	{"location" : "wardrobe"},
+	{"speaker" : "Liz" , "text" : " I'm gald you decide to go with the correct choice "},
+	{"speaker" : "Liz" , "text" : " Wait..."},
 	{"anchor" : "wardrobe2"},
-	{"speaker" : "Liz" , "text" : "What are we looking for again?"},
+	{"speaker" : "Liz" , "text" : " What are you looking for again to protect yourself from the sun today?"},
 	{"choices" :
 		[
-			{"text" : "jacket", "goto": "jacket"},
-			{"text" : "Umbrella", "goto": "Umbrella"},
-			{"text" : "cap", "goto": "cap"}
+			{"text" : " jacket", "goto": "jacket"},
+			{"text" : " Umbrella", "goto": "Umbrella"},
+			{"text" : " cap", "goto": "cap"}
 		] 
 	},
 	
 	{"anchor" : "cap"},
-	{"speaker" : "Liz" , "text" : "Greate job. Let's go to the kitchen"},
-	{"goto" : "kitchen"},
+	{"speaker" : "Liz" , "text" : " Great job, That's exactly what you need for a sunny day."},
+	{"next_scene" : "going_to_kitchen" , "transition" : "fade"},
+	{"goto" : "going_to_kitchen"},
+	
+
 	
 	{"anchor" : "Umbrella"},
-	{"speaker" : "Liz" , "text" : "oh no bad choice"},
+	{"speaker" : "Liz" , "text" : " An umbrella can block the sun, that's true!"},
+	{"speaker" : "Liz" , "text" : " But it might be tricky to play with an umbrella in your hand at the playground."},
+	{"speaker" : "Liz" , "text" : " A cap is usually a bit easier to wear while running and playing."},
 	{"goto" : "wardrobe2"},
 	
 	{"anchor" : "jacket"},
-	{"speaker" : "Liz" , "text" : "oh no bad choice"},
+	{"speaker" : "Liz" , "text" : " Hmm, a jacket might keep you warm, but today is hot!"},
+	{"speaker" : "Liz" , "text" : " It would make you feel even hotter."},
+	{"speaker" : "Liz" , "text" : " Let's try to find something to keep you cool instead."},
 	{"goto" : "wardrobe2"},
 	
+	
+	
+	
+	
+	
+	
+	{"anchor" : "going_to_kitchen"},
+	
+	{"location" : "going_to_kitchen"},
+	{"speaker" : "Liz" , "text" : " Let's move on to the kitchen!"},
+	{"next_scene" : "kitchen" , "transition" : "fade"},
+	
+	
+	
+	
+	
+	
+	
+	
 	{"anchor" : "kitchen"},
-	{"speaker" : "Liz" , "text" : "yay you at the kitchen."},
-	{"speaker" : "Liz" , "text" : "Today you are going to the play groung."},
+	
+	{"location" : "kitchen"},
+	{"speaker" : "Liz" , "text" : " you have your cap and it seems like you are ready"},
+	{"speaker" : "Liz" , "text" : " But remember, your cap can protect you from the sunrays"},
+	{"speaker" : "Liz" , "text" : " but there is still a change that you over heat from the heat."},
+	{"speaker" : "Liz" , "text" : " With that said,"},
+	{"speaker" : "Liz" , "text" : " take a look around the kitchen a bit."},
+	{"anchor" : "kitchen_decision"},
+	{"speaker" : "Liz" , "text" : " Besides your cap, what else could you take with you to the playground to help you on this hot day?"},
+	{"choices" :
+		[
+			{"text" : "A spoon", "goto": "spoon"},
+			{"text" : "A bottle of water", "goto": "water"},
+			{"text" : "A bowl", "goto": "bowl"}
+		] 
+	},
+	
+	{"anchor" : "water"},
+	{"speaker" : "Liz" , "text" : " Great job!"},
+	{"speaker" : "Liz" , "text" : "  It's very important to drink water when it's hot and you're playing, so you don't get thirsty or tired."},
+	{"next_scene" : "going_outside" , "transition" : "fade"},
+	{"goto" : "going_outside"},
+	
+	
+	{"anchor" : "spoon"},
+	{"speaker" : "Liz" , "text" : " A spoon is great for eating, but it won't help you stay cool or hydrated at the playground."},
+	{"speaker" : "Liz" , "text" : " Let's think about something else"},
+	{"goto" : "kitchen_decision"},
+	
+	{"anchor" : "bowl"},
+	{"speaker" : "Liz" , "text" : " A bowl is useful for eating, but it might be tricky to carry around at the playground,"},
+	{"speaker" : "Liz" , "text" : " and it won't help you stay cool or hydrated."},
+	{"speaker" : "Liz" , "text" : " Let's think about something else"},
+	{"goto" : "kitchen_decision"},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{"anchor" : "going_outside"},
+	
+	{"location" : "going_outside"},
+	{"speaker" : "Liz" , "text" : " Great job getting ready. Now, let's head outside!"},
+	{"next_scene" : "boy_meets_friend" , "transition" : "fade"},
+	{"goto" : "boy_meets_friend"},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	{"anchor" : "boy_meets_friend"},
+	
+	{"location" : "boy_meets_friend"},
+	{"speaker" : "Liz" , "text" : " On your way to the playground, you meet your friend, Zuko."},
+	{"speaker" : "Liz" , "text" : " Oh no, Zuko doesn't have a cap or a bottle of water!"},
+	{"speaker" : "Liz" , "text" : " Zuko looks a bit confused."},
+	{"anchor" : "tell_friend_cap"},
+	{"speaker" : "Liz" , "text" : " Tell your friend why they need a cap on a hot, sunny day. "},
+	{"choices" :
+		[
+			{"text" : " A cap makes you look cool and fashionable.", "goto": "cap_wrong"},
+			{"text" : " A cap will stop your head from getting too hot and protect your eyes from the bright sun", "goto": "cap_correct"},
+			{"text" : " A cap can hold your snacks for later", "goto": "cap_wrong"}
+		] 
+	},
+	
+	{"anchor" : "cap_correct"},
+	{"speaker" : "Liz" , "text" : " Exactly! That's a super smart reason. Zuko understands now!"},
+	{"goto" : "tell_friend_water"},
+
+
+	
+	{"anchor" : "cap_wrong"},
+	{"speaker" : "Liz" , "text" : " Hmm, while caps can look good,and maybe you could put snacks in them,"},
+	{"speaker" : "Liz" , "text" : " the most important reason for a cap on a hot day is to protect your head from the sun. "},
+	{"speaker" : "Liz" , "text" : " Let's try again to help Zuko understand why it's so important. "},
+	{"goto" : "tell_friend_cap"},
+	
+	
+	{"anchor" : "tell_friend_water"},
+	{"speaker" : "Liz" , "text" : " Now, tell Zuko why they also need water when playing outside in the hot sun. Choose the best reason: "},
+	{"choices" :
+		[
+			{"text" : " Water will keep your body cool and give you energy to play more", "goto": "water_correct"},
+			{"text" : " Water makes loud sloshing noises when you run.", "goto": "water_wrong"},
+			{"text" : " Water can be used to water the plants at the playground", "goto": "water_wrong"}
+		] 
+	},
+	
+	{"anchor" : "water_correct"},
+	{"speaker" : "Liz" , "text" : " You got it!"},
+	{"speaker" : "Liz" , "text" : " Drinking water keeps you from getting thirsty and tired, so you can play all day long! Zuko nods in agreement."},
+	{"next_scene" : "boy_and_friend_have_caps" , "transition" : "fade"},
+	{"goto" : "boy_and_friend_have_caps"},
+	
+
+
+	
+	{"anchor" : "water_wrong"},
+	{"speaker" : "Liz" , "text" : " While water can make sounds or water plants, the most important thing for your body on a hot day is to drink it!"},
+	{"speaker" : "Liz" , "text" : " It helps you stay healthy and gives you energy for playing.  "},
+	{"speaker" : "Liz" , "text" : " Let's try again to help Zuko understand. "},
+	{"goto" : "tell_friend_water"},
+	
+	
+	
+	
+	
+	
+	
+	{"anchor" : "boy_and_friend_have_caps"},
+	
+	{"location" : "boy_and_friend_have_caps"},
+	{"speaker" : "Liz" , "text" : " Great job. Now Zuko knows how to stay safe and healthy in the sun too."},
+	{"speaker" : "Liz" , "text" : " It looks like Zuko quickly went to grab their own cap and water after listening to your smart advice!"},
+	{"speaker" : "Liz" , "text" : " Go enjoy your day at the playground with your friends!"},
+
 
 ]

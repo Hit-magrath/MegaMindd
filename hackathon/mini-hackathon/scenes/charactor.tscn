@@ -40,4 +40,3 @@ scale = Vector2(0.97042, 1)
 position = Vector2(74.9056, 223.5)
 scale = Vector2(0.639413, 0.614667)
 sprite_frames = SubResource("SpriteFrames_cmwa2")
-animation = &"talk"
