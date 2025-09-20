@@ -1,0 +1,50 @@
+I understand completely! Thank you for clarifying the image order and the new storyline. That's a much clearer and more culturally specific narrative to work with. I'll re-sequence the images and create a brand new script based on Thato's quest to find the missing goats.
+
+Here is the revised game script, focused on memory, critical thinking, and reading for meaning, with a new storyline and image order.
+
+The Quest for the Missing Goats
+Game Concept: Thato, a young boy from a rural village in KwaZulu-Natal, discovers his family's goats are missing. The player guides Thato on an interactive quest to find them, using his wits and memory to solve puzzles along the way.
+
+Player: Thato, a responsible and clever young boy.
+Setting: A small, vibrant village in rural KwaZulu-Natal.
+
+Scene 1: The Morning Mission
+Script: Thato: "Molo, Mzala! (Hello, cousin!) I was ready to greet the goats this morning, but they are gone! I need to ask Gogo if she has seen them. This is not good."
+
+(Player is prompted to click on a path to find the grandmother's hut.)
+
+Learning Objective: This scene introduces the problem and the character's motivation. It's an initial orientation phase that encourages the player to pay attention to the environment and the first clue.
+
+Scene 2: The Grandmother's Clue
+Script: 
+Thato: "Gogo! The goats are gone! Have you seen them?"
+Gogo: "Oh, Thato. My eyes are old and don't see as far as they used to. But a clever mind can see what the eyes cannot. Look carefully. What do you see?"
+(The player is prompted to click on a list of clues: 'a piece of red fabric', 'a broken piece of rope', 'a letter with a strange symbol'.)
+Gogo: "Those clues are not random. You must read the letter to understand where to go next."
+(A close-up of the letter appears for the player to read.)
+Learning Objective: This scene focuses on reading for meaning and attention to detail. The player must read and process the information presented by the grandmother and the on-screen clues to progress.
+
+Scene 3: The Memory Test
+Script:Thato: "This must be where the letter was talking about! All these paths... but only one is the right one. Gogo said I must remember the symbol from the letter."
+Riddle on the letter: "My path is shown by the colour of the sun at midday. Follow the symbol that shines the brightest."
+(The player is presented with three symbols, and only one matches the symbol on the letter. To reinforce memory, the player has to recall the symbol and connect it to the riddle's clue, which points to the "brightest" or "sun" symbol.)
+Learning Objective: This scene tests memory retention combined with reading comprehension. The player must recall the visual clue (the symbol) and match it to the description in the riddle to choose the correct path. This activity strengthens the link between visual and textual memory.
+
+Scene 4: The Logic Puzzle
+Script: Thato: "Phew, I made it to the river! The map was right. Wait... what's this? So many footprints! There are goat prints, but also tracks from other animals. I have to figure out which ones are ours."
+(The player is presented with a close-up of the tracks. The image highlights a few different trails: one of a goat, one of a dog, and one of a bird. The goat's footprints have a distinctive, slightly chipped hoof print.)
+Thato: "My grandmother always told me to look for the little things. He taught me that our biggest goat, Mandla, has a chipped hoof from when he was little. That must be our trail!"
+(The player is prompted to click or tap on the trail with the chipped hoof print.)
+(If the player chooses the correct trail):
+Thato: "I knew it! This is our goats’ trail. It leads right across the river. They must be close by!"
+Learning Objective: This scene focuses on critical thinking and observation. The player must carefully "read" the visual clues in the image, identify the specific detail (the chipped hoof print) from the text, and use that information to solve the puzzle. This reinforces the importance of paying attention to detail and using reasoning to solve problems.
+
+Scene 5: The Discovery
+Script: Thato: "Ngiyabonga, Bra Sizwe! (Thank you, Bra Sizwe!) My goats are safe! I was so worried."
+Bra Sizwe: "Hau, Thato! I found them wandering near the main road. I knew they belonged to you, so I kept them here so they would not get lost. I was just coming to your home to return them. You are a clever boy for following the clues to find them yourself!"
+Learning Objective: This is the climax of the story. The player's effort in memory, reading, and critical thinking has led to a successful conclusion. The scene reinforces the idea that these skills have a real-world application.
+
+Scene 6: The Return Home
+Script: Gogo: "Thato, my heart is full. Not because the goats are home, but because I see the man you are becoming. A man who can read the world and think for himself. That is a skill more valuable than a whole flock of goats."
+Thato: "Thank you, Gogo. I will always remember what you taught me."
+Learning Objective: The final scene provides a sense of closure and reinforces the moral of the story: that knowledge, memory, and critical thinking are essential life skills. The proud expression of the grandmother validates the player's journey and achievements.
