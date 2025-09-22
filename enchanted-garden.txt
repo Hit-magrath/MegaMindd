@@ -1,0 +1,75 @@
+Scene 1:
+
+Narrator (Voiceover): "Hey there, adventurer! Have you ever wondered what's on the other side of a magical door? This one is waiting for you! It leads to a secret place, full of fun and games. Are you ready to begin your quest?"
+
+(A sparkling sound plays as the 'Play' button glows on the screen)
+
+
+Scene 2: The Mysterious Entrance
+
+Script: Owl: “Welcome, brave traveler! To enter this magical realm, you must solve my riddle: ‘I can fly without wings. I can cry without eyes. Wherever I go, darkness flies. What am I?’”
+
+Button Choices:
+A. A cloud.
+B. A bird.
+C. A shadow.
+
+User Chooses:  A bird
+Owl: “Ah, a bird! While they do fly, they have wings and do not bring darkness. Try again!”
+
+User Chooses: A cloud.
+Owl: “Clever indeed! You may enter the garden.”
+
+User Chooses: A shadow
+Owl: "Ah, a shadow! While it does bring darkness, it can't fly, nor can it not cry. Try again!"
+
+
+Scene 3: The Sunflower Path
+
+Script: Bee: “Hello, adventurer! I’m Beatrice. To pass this way, you must recall the name of the flower who spoke to you just now. One of us is as bright as the sun, and the other is as red as a rose. What is the name of the red sunflower?”
+
+Button Choices:
+A. Sunny
+B. Rosie
+C. Petal
+
+User Chooses: Rosie
+Bee: "Wonderful! You have a great memory. The path is now clear for you to continue!"
+
+User Chooses: Sunny
+Bee: "Ah, sunny is indeed a sunflower but she isn't red. Try again!"
+
+User Chooses: Petal
+Bee: "Ah, petal, is not a whole flower. Try again!"
+
+
+Scene 4: The Singing Tree
+
+Script: Sun: "Hello, friend! We love to sing in this part of the garden. But to cross this magical stream, you must repeat the last note of the birds' song. Can you tell me what it is?"
+
+(The birds sing a short melody: "Do-Re-Mi-Fa-So-La-Ti-Do")
+
+Button Choices:
+A. Ti
+B. So
+C. Do
+
+User Chooses: Do
+Sun: "That's exactly right! Your ears are so sharp. The water will now part for you.”
+
+User Chooses: So
+Sun: "Try listening to melody again."
+
+User Chooses: Ti
+Sun: "Try listening to melody again."
+
+
+Scene 5: The Grand Celebration
+
+Script: Turtle: "Welcome, brave adventurer! You have solved all the challenges and found your way to the heart of the Enchanted Garden. We are celebrating you!"
+
+Narrator: “The adventurer joins the party, happy to have found a new home in this magical world, filled with friends and a lifetime of adventures.”
+
+The End.
+
+
