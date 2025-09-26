@@ -7,7 +7,7 @@ extends Control
 signal choice_selected
 
 # Preload button scene 
-const choices_button_scene = preload("res://scenes/button.tscn")
+const choices_button_scene = preload("res://GardenStory/scenes/button.tscn")
 const ANIMATE_SPEED : int = 30 
 
 var animate_text : bool = false

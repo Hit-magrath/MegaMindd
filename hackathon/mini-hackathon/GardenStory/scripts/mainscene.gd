@@ -9,7 +9,7 @@ var dialog_lines : Array = []
 
 func _ready() -> void:
 	# Load the JSON file
-	dialog_lines = load_json("res://resources/story/story.json")
+	dialog_lines = load_json("res://GardenStory/resources/story/story.json")
 	
 	if dialog_lines.is_empty():
 		printerr("ERROR: No dialog lines loaded!")
@@ -98,7 +98,7 @@ func process_current_line():
 		advance_dialogue()
 
 func change_background(location_name: String):
-	var background_file = "res://assets/enchanted_garden/" + location_name + ".png"
+	var background_file = "res://GardenStory/assets/enchanted_garden/" + location_name + ".png"
 	print("Attempting to load background: ", background_file)
 	
 	if ResourceLoader.exists(background_file):
@@ -110,9 +110,9 @@ func change_background(location_name: String):
 			print("ERROR: Could not load texture: ", background_file)
 	else:
 		print("ERROR: Background file not found: ", background_file)
-		# List available files for debugging
+		# List available files for debugging          
 		print("Available backgrounds:")
-		var dir = DirAccess.open("res://assets/enchanted_garden/")
+		var dir = DirAccess.open("res://GardenStory/assets/enchanted_garden/")
 		if dir:
 			dir.list_dir_begin()
 			var file_name = dir.get_next()
