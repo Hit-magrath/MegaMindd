@@ -1,0 +1,100 @@
+[gd_scene load_steps=5 format=3 uid="uid://p7mqxfy68yo1"]
+
+[ext_resource type="Script" uid="uid://b5b0jogqhgysw" path="res://GoatStory/scripts/dialogue_ui.gd" id="1_6q285"]
+[ext_resource type="Theme" uid="uid://dmc5nfwnedng6" path="res://GoatStory/themes/dialogue_theme.tres" id="1_dwk8m"]
+[ext_resource type="PackedScene" uid="uid://dsvxa0v2o4gpl" path="res://GoatStory/scenes/player_choice.tscn" id="3_jx1sv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6q285"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[node name="DialogueUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6q285")
+
+[node name="DialogueUI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = -4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueBox" type="PanelContainer" parent="DialogueUI"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -91.0
+offset_right = 4.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueLine" type="RichTextLabel" parent="DialogueUI/DialogueBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_stretch_ratio = 1.01
+theme = ExtResource("1_dwk8m")
+bbcode_enabled = true
+text = "I saw the goats this morning near the river. One was drinking water, another was eating by the fig tree."
+
+[node name="SpeakerBox" type="Control" parent="DialogueUI"]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -159.0
+offset_right = 200.0
+offset_bottom = -89.0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="DialogueUI/SpeakerBox"]
+polygon = PackedVector2Array(0, 0, 170, 0, 200, 70, 0, 70)
+
+[node name="SpeakerName" type="Label" parent="DialogueUI/SpeakerBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = -17.0
+offset_right = 58.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Gogo Thandi"
+label_settings = SubResource("LabelSettings_6q285")
+
+[node name="ChoicesContainer" type="CenterContainer" parent="DialogueUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="DialogueUI/ChoicesContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Button" parent="DialogueUI/ChoicesContainer/ChoiceList" instance=ExtResource("3_jx1sv")]
+visible = false
+layout_mode = 2

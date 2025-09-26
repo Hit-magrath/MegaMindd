@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cppgsen1ohofm"]
+
+[ext_resource type="Script" uid="uid://c80hasq77ib7w" path="res://scripts/scene_one.gd" id="1_natno"]
+[ext_resource type="Texture2D" uid="uid://dwxjnmeth2qqy" path="res://background_images/background_one.png" id="2_d7pav"]
+[ext_resource type="PackedScene" uid="uid://p7mqxfy68yo1" path="res://scenes/dialogue_ui.tscn" id="3_j2yia"]
+
+[node name="SceneOne" type="Node2D"]
+script = ExtResource("1_natno")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d7pav")
+
+[node name="DialogueUI" parent="CanvasLayer" instance=ExtResource("3_j2yia")]
+unique_name_in_owner = true
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 4.0
+offset_bottom = 4.0

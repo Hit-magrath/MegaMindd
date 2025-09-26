@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://cud8217x4lhm5"]
+
+[ext_resource type="Script" uid="uid://dl3mdh5uw8xfk" path="res://scripts/scene_five.gd" id="1_a03t8"]
+[ext_resource type="Texture2D" uid="uid://daurhu3ltnv5h" path="res://background_images/background_five.png" id="1_qrmb4"]
+[ext_resource type="Theme" uid="uid://dmc5nfwnedng6" path="res://themes/dialogue_theme.tres" id="2_a03t8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lyg18"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="SceneFive" type="Node2D"]
+script = ExtResource("1_a03t8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qrmb4")
+
+[node name="DialogueUI" type="Control" parent="CanvasLayer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = -4.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueBox" type="PanelContainer" parent="CanvasLayer/TextureRect/DialogueUI"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -91.0
+offset_right = 4.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueLine5" type="RichTextLabel" parent="CanvasLayer/TextureRect/DialogueUI/DialogueBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_stretch_ratio = 1.01
+theme = ExtResource("2_a03t8")
+bbcode_enabled = true
+text = "I saw one goat earlier near the… hmm… was it the maize field, or by the soccer ground? Wait, maybe it was close to the school?"
+
+[node name="SpeakerBox" type="Control" parent="CanvasLayer/TextureRect/DialogueUI"]
+custom_minimum_size = Vector2(200, 70)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -161.0
+offset_right = 203.0
+offset_bottom = -91.0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/TextureRect/DialogueUI/SpeakerBox"]
+polygon = PackedVector2Array(0, 0, 170, 0, 200, 70, 0, 70)
+
+[node name="SpeakerLine5" type="Label" parent="CanvasLayer/TextureRect/DialogueUI/SpeakerBox"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 12.0
+offset_right = 175.0
+offset_bottom = 43.0
+grow_vertical = 2
+text = "Mr. Dlamini
+"
+label_settings = SubResource("LabelSettings_lyg18")
