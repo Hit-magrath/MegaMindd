@@ -1,0 +1,98 @@
+[
+	{"location": "mysterious_entrance"},
+	{"speaker": "Narrator", "text": "Once upon a time, a curious adventurer discovered a hidden entrance to an enchanted garden. A wise old owl perched on a gnarled branch greeted them."},
+	{"speaker": "Owl", "text": "Welcome, brave traveler! To enter this magical realm, you must solve my riddle: 'I can fly without wings. I can cry without eyes. Wherever I go, darkness flies. What am I?'"},
+	{"anchor": "riddle_question"},
+	{"choices": [
+		{"text": "A cloud", "goto": "cloud_answer"},
+		{"text": "A bird", "goto": "bird_answer"},
+		{"text": "A shadow", "goto": "shadow_answer"}
+	]},
+	
+	{"anchor": "bird_answer"},
+	{"speaker": "Owl", "text": "Ah, a bird! While they do fly, they have wings and do not bring darkness. Try again!"},
+	{"goto": "riddle_question"},
+	
+	{"anchor": "shadow_answer"},
+	{"speaker": "Owl", "text": "Close! A shadow does follow and bring darkness, but it cannot cry. Think again!"},
+	{"goto": "riddle_question"},
+	
+	{"anchor": "cloud_answer"},
+	{"speaker": "Owl", "text": "Clever indeed! You may enter the garden."},
+	{"next_scene": "welcome_garden", "transition": "fade"},
+	{"goto": "welcome_gar-den"},
+	
+	{"anchor": "welcome_garden"},
+	{"location": "welcome_garden"},
+	{"speaker": "You have been granted access!"},
+	{"next_scene": "memory_maze", "transition": "fade"},
+	{"goto": "memory_maze"},
+	
+	
+	{"anchor": "memory_maze"},
+	{"location": "memory_maze"},
+	{"speaker": "Narrator", "text": "Inside, the adventurer found a maze filled with sunflowers, each eager to share their story."},
+	{"speaker": "Sunny", "text": "Hello! I'm Sunny, the yellow sunflower. I love the sun!"},
+	{"speaker": "Rosie", "text": "And I'm Rosie, the red rose! My scent is sweet!"},
+	{"speaker": "Narrator", "text": "As the adventurer walked, they encountered a buzzing bee."},
+	{"speaker": "Bee", "text": "To pass, you must recall the names of the flowers you've met."},
+	{"anchor": "memory_question"},
+	{"choices": [
+		{"text": "Sunny and Rosie", "goto": "correct_flowers"},
+		{"text": "Daisy and Lily", "goto": "wrong_flowers"},
+		{"text": "Tulip and Orchid", "goto": "wrong_flowers"}
+	]},
+	
+	{"anchor": "wrong_flowers"},
+	{"speaker": "Bee", "text": "Daisy and Lily are lovely flowers, but you have not met them! You need to remember Sunny and Rosie to continue."},
+	{"goto": "memory_question"},
+	
+	{"anchor": "correct_flowers"},
+	{"speaker": "Bee", "text": "Impressive! You may continue on your quest!"},
+	{"next_scene": "decision_tree", "transition": "fade"},
+	{"goto": "decision_tree"},
+	
+	
+	
+	
+	{"anchor": "decision_tree"},
+	{"location": "decision_tree"},
+	{"speaker": "Narrator", "text": "The adventurer arrived at a grand tree with branches leading in different directions."},
+	{"speaker": "Tree", "text": "Choose wisely! Do you wish to follow the path of the singing birds or the shimmering stream?"},
+	{"anchor": "path_question"},
+	{"choices": [
+		{"text": "The path of the singing birds", "goto": "birds_path"},
+		{"text": "The path of the shimmering stream", "goto": "stream_path"}
+	]},
+	
+	{"anchor": "stream_path"},
+	{"speaker": "Tree", "text": "Ah, the stream is calm, but it leads to stillness and reflection. The singing birds hold secrets and joy, which may lead to greater adventures!"},
+	{"goto": "path_question"},
+	
+	{"anchor": "birds_path"},
+	{"speaker": "Tree", "text": "A brave choice! May it lead you to wonders!"},
+	{"next_scene": "celebration", "transition": "fade"},
+	{"goto": "celebration"},
+	
+	
+	
+	
+	{"anchor": "celebration"},
+	{"location": "celebration"},
+	{"speaker": "Narrator", "text": "Finally, the adventurer reached a sunlit clearing, where all the garden's inhabitants gathered to celebrate."},
+	{"speaker": "Owl", "text": "You've journeyed far and learned much! What have you discovered?"},
+	{"anchor": "lesson_question"},
+	{"choices": [
+		{"text": "I learned to listen carefully and recall details.", "goto": "correct_lesson"},
+		{"text": "I learned that the path of the stream is the best.", "goto": "wrong_lesson"},
+		{"text": "I learned that flowers don't talk.", "goto": "wrong_lesson"}
+	]},
+	
+	{"anchor": "wrong_lesson"},
+	{"speaker": "Owl", "text": "The stream has its beauty, but it was the adventure with the singing birds that revealed secrets and joy! Reflect on your journey; every choice teaches us."},
+	{"goto": "lesson_question"},
+	
+	{"anchor": "correct_lesson"},
+	{"speaker": "Owl", "text": "Well said! You have grown in attention, memory, and reasoning. Wear this flower crown as a symbol of your achievements!"},
+	{"speaker": "Narrator", "text": "And so, the adventurer left the enchanted garden, their heart filled with joy and newfound wisdom, ready to share their tale with the world."}
+]
