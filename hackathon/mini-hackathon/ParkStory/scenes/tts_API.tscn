@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7h586iu5nugg"]
+
+[ext_resource type="Script" uid="uid://dir83f7omhtm2" path="res://ParkStory/scripts/tts_api.gd" id="1_apg75"]
+
+[node name="TtsApi" type="Node2D"]
+script = ExtResource("1_apg75")

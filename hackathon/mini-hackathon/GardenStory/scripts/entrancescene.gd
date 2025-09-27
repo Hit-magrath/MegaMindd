@@ -3,6 +3,7 @@ extends Node2D
 @onready var background = %Background
 @onready var character = %Character
 @onready var dialogUI =%DialogueUI
+@onready var tts_api = %TtsApi
 
 var dialog_index : int = 0
 var dialog_lines : Array = []
@@ -95,6 +96,7 @@ func process_current_line():
 		dialogUI.display_choices(line["choices"])
 	
 	elif line.has("speaker") and line.has("text"):
+		tts_api.speak(line["text"])
 		# Display regular dialogue
 		print("Displaying dialogue: ", line["speaker"], " - ", line["text"])
 		dialogUI.change_line(line["speaker"], line["text"])

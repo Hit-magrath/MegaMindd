@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var dialogue_ui = %DialogueUI
 @onready var background = %Background
+@onready var tts_api = %TtsApi
+
 
 var transition_effect: String = "fade"
 var dialogue_file: String = "res://GoatStory/resources/story/story.json"
@@ -21,9 +23,12 @@ func _input(event):
 	var line = dialogue_lines[dialogue_index]
 	var has_choices = line.has("choices")
 	if event.is_action_pressed("next_line") and not has_choices:
-		if dialogue_index < len(dialogue_lines) - 1:
-			dialogue_index += 1
-			process_current_line()
+		if dialogue_ui.animate_text:
+			dialogue_ui.skip_animation()
+		else :	
+			if dialogue_index < len(dialogue_lines) - 1:
+				dialogue_index += 1 
+				process_current_line()
 
 func process_current_line():
 	if dialogue_index >= dialogue_lines.size() or dialogue_index < 0:
@@ -72,8 +77,8 @@ func process_current_line():
 		#Display choices
 		dialogue_ui.display_choices(line["choices"])
 	else:
-		dialogue_ui.speaker_name.text = line["speaker"]
-		dialogue_ui.dialogue_line.text = line["text"]
+		tts_api.speak(line["text"])
+		dialogue_ui.change_line(line["speaker"], line["text"])
 
 func  get_anchor_position(anchor: String):
 	#Find the anchor entry with matching name

@@ -46,7 +46,7 @@ func _on_create_pressed():
 	# ✅ Send to Supabase
 	create_user_record(email, password)
 	
-	get_tree().change_scene_to_file()
+	get_tree().change_scene_to_file("res://Main/Main.tscn")
 
 # -----------------------
 # Supabase Users Table

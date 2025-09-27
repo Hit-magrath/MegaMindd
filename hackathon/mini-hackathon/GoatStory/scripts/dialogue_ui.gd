@@ -3,7 +3,11 @@ signal choice_selected
 
 const ChoiceButtonScene = preload("res://GoatStory/scenes/player_choice.tscn")
 
-@onready var dialogue_line = %DialogueLine
+const ANIMATE_SPEED : int = 30 
+var animate_text : bool = false
+var current_visble_characters : int = 0
+
+@onready var dialogLines = %DialogueLine
 @onready var speaker_name = %SpeakerName
 @onready var choice_list = %ChoiceList
 # Called when the node enters the scene tree for the first time.
@@ -34,7 +38,23 @@ func display_choices(choices: Array):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if animate_text :
+		if dialogLines.visible_ratio < 1 :
+			dialogLines.visible_ratio += ( 1.0 / dialogLines.text.length()) * (ANIMATE_SPEED * delta)
+			current_visble_characters = dialogLines.visible_characters
+		else :
+			animate_text = false
+
+func change_line(speaker : String ,line : String) :
+	speaker_name.text = speaker
+	current_visble_characters = 0
+	dialogLines.text = line
+	dialogLines.visible_characters = 0
+	animate_text = true
+	
+	
+func skip_animation():
+	dialogLines.visible_ratio = 1
 
 func _on_choice_button_pressed(anchor: String):
 	choice_selected.emit(anchor)

@@ -3,6 +3,10 @@ extends Node2D
 @onready var background = %Background
 @onready var charactor = %charactor
 @onready var dialogUi = %DialogUI
+@onready var tts_api = %TtsApi
+
+
+
 
 var dialog_index : int = 0
 
@@ -67,6 +71,7 @@ func process_current_line():
 		dialogUi.display_choices(line["choices"])
 		
 	else:
+		tts_api.speak(line["text"])
 		dialogUi.change_line(line["speaker"], line["text"])
 
 func get_anchor_position(anchor : String):

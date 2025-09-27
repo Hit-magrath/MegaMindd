@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://duqrt7eg6pp7e"]
+[gd_scene load_steps=6 format=3 uid="uid://duqrt7eg6pp7e"]
 
 [ext_resource type="Script" uid="uid://cgb0a75xk0tuh" path="res://ParkStory/scripts/mainscene.gd" id="1_qklmv"]
 [ext_resource type="PackedScene" uid="uid://c2n8erlb0udu7" path="res://ParkStory/scenes/charactor.tscn" id="2_4dvvg"]
 [ext_resource type="Texture2D" uid="uid://r446d6ob33gt" path="res://ParkStory/assets/ai_gen_boy/boy_wakes_up.png" id="2_qklmv"]
 [ext_resource type="PackedScene" uid="uid://b8rwx5ojxdkuy" path="res://ParkStory/scenes/dialog_ui.tscn" id="3_rnjyy"]
+[ext_resource type="PackedScene" uid="uid://c7h586iu5nugg" path="res://ParkStory/scenes/tts_API.tscn" id="5_fub3u"]
 
 [node name="MainScene" type="Node2D"]
 script = ExtResource("1_qklmv")
@@ -36,4 +37,7 @@ unique_name_in_owner = true
 position = Vector2(-170, 197)
 
 [node name="DialogUI" parent="CanvasLayer2" instance=ExtResource("3_rnjyy")]
+unique_name_in_owner = true
+
+[node name="TtsApi" parent="." instance=ExtResource("5_fub3u")]
 unique_name_in_owner = true

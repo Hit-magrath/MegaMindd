@@ -20,7 +20,7 @@
 	{"anchor": "cloud_answer"},
 	{"speaker": "Owl", "text": "Clever indeed! You may enter the garden."},
 	{"next_scene": "welcome_garden", "transition": "fade"},
-	{"goto": "welcome_gar-den"},
+	{"goto": "welcome_garden"},
 	
 	{"anchor": "welcome_garden"},
 	{"location": "welcome_garden"},
@@ -46,6 +46,7 @@
 	{"anchor": "wrong_flowers"},
 	{"speaker": "Bee", "text": "Daisy and Lily are lovely flowers, but you have not met them! You need to remember Sunny and Rosie to continue."},
 	{"goto": "memory_question"},
+	
 	
 	{"anchor": "correct_flowers"},
 	{"speaker": "Bee", "text": "Impressive! You may continue on your quest!"},
