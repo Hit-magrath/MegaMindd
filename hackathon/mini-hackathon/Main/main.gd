@@ -1,36 +1,44 @@
 extends Node2D
-#@onready var button = %Button
-#@onready var button2 = %TextureButton
+
 @onready var choice_container = %VBoxContainer
 
 const story_choice_scene = preload("res://Main/story_options.tscn")
 
-const choises_array : Array = [{"text" : "Goat story" , "path" :"res://Main/GoatLogo.png"}, {"text" : "Garden story" , "path" :"res://Main/EnchartedLogo.png"} , {"text" : "Park story" ,  "path" :"res://Main/ParkLogo.jpg"}]
+const choices_array: Array = [
+	{"text": "Goat story", "path": "res://Main/GoatLogo.png", "scene": "res://GoatStory/scenes/main_scene.tscn"},
+	{"text": "Garden story", "path": "res://Main/EnchartedLogo.png", "scene": "res://GardenStory/scenes/entrancescene.tscn"},
+	{"text": "Park story", "path": "res://Main/ParkLogo.jpg", "scene": "res://ParkStory/scenes/Mainscene.tscn"}
+]
 
 func _ready():
 	choice_container.hide()
-	display_choices(choises_array)
-	
+	display_choices(choices_array)
 
-func _on_start_button_pressed():
-	get_tree().change_scene_to_file("res://ParkStory/scenes/Mainscene.tscn")
-	
-func display_choices(choices : Array):
-	#Remove any button that already exist
-	for child in choice_container.get_children() :
+func _on_story_button_pressed(target_scene: String):
+	get_tree().change_scene_to_file(target_scene)
+
+func display_choices(choices: Array):
+	# Remove existing buttons
+	for child in choice_container.get_children():
 		child.queue_free()
-	#create new button for each choice 
+
+	# Create new buttons
 	for choice in choices:
 		var choice_button = story_choice_scene.instantiate()
-		var button_logo = load(choice["path"])
-		choice_button.texture_normal = button_logo
 		
-		var story_name = choice_button.get_child(0)
-		story_name.text = choice["text"]
-		choice_button.pressed.connect(_on_start_button_pressed)
+		# Load and assign texture to the TextureButton (root node)
+		var logo = load(choice["path"])
+		if logo:
+			choice_button.texture_normal = logo  # ✅ Godot 4 property name
 		
-		#add button to choices container
+		# Set the label text (first child)
+		var label = choice_button.get_child(0)
+		if label and label is Label:
+			label.text = choice["text"]
+		
+		# Connect button press with the correct scene path
+		choice_button.pressed.connect(_on_story_button_pressed.bind(choice["scene"]))
+		
 		choice_container.add_child(choice_button)
-		
-	choice_container.show()
 	
+	choice_container.show()
