@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt16crqasio5j"]
+
+[ext_resource type="Script" uid="uid://cg1absg00djql" path="res://Main/logo_rr.gd" id="1_1xspm"]
+[ext_resource type="Texture2D" uid="uid://3jofsgmhqrku" path="res://Main/MegaMindd_logo.png" id="2_sn6h7"]
+
+[node name="LogoRr" type="Node2D"]
+script = ExtResource("1_1xspm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sn6h7")
