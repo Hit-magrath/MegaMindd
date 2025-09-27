@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://l5empvvo1yak"]
+
+[ext_resource type="Script" uid="uid://dwfoue5r43llr" path="res://Main/main.gd" id="1_83ytx"]
+[ext_resource type="PackedScene" uid="uid://b7wff7da87j4" path="res://ParkStory/scenes/playerChoice.tscn" id="2_amygn"]
+[ext_resource type="Texture2D" uid="uid://cj1ahkipxwbk3" path="res://ParkStory/assets/ai_gen_boy/kitchen.png" id="3_amygn"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_83ytx")
+
+[node name="Button" parent="." instance=ExtResource("2_amygn")]
+unique_name_in_owner = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+offset_left = 60.0
+offset_top = 73.0
+offset_right = 1160.0
+offset_bottom = 673.0
+texture_normal = ExtResource("3_amygn")

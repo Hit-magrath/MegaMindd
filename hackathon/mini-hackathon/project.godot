@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="mini hackathon"
-run/main_scene="res://ParkStory/scenes/Mainscene.tscn"
+run/main_scene="uid://l5empvvo1yak"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

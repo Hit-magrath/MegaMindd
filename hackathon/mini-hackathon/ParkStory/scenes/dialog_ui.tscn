@@ -28,7 +28,6 @@ layout_mode = 2
 theme_override_constants/separation = 45
 
 [node name="Button" parent="ChoicesContainer/ChoiceList" instance=ExtResource("3_edwrk")]
-visible = false
 layout_mode = 2
 
 [node name="DialogBox" type="PanelContainer" parent="."]
