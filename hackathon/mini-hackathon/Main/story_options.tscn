@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://8e2lm2spp6kt"]
+
+[ext_resource type="Texture2D" uid="uid://cdqasqxpabj84" path="res://Main/GoatLogo.png" id="1_twhic"]
+
+[node name="TextureButton" type="TextureButton"]
+texture_normal = ExtResource("1_twhic")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 65.0
+offset_right = 543.0
+offset_bottom = 88.5
+text = "story name"
