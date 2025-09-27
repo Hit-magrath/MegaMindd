@@ -18,18 +18,34 @@ grow_vertical = 2
 texture = ExtResource("2_amygn")
 
 [node name="Control" type="Control" parent="CanvasLayer/TextureRect"]
-anchors_preset = 0
-offset_left = 4.0
-offset_top = 6.0
-offset_right = 44.0
-offset_bottom = 46.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect/Control"]
+layout_mode = 0
+offset_left = -475.0
+offset_top = -551.0
+offset_right = 538.0
+offset_bottom = -515.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_font_sizes/font_size = 26
+text = "Title Manger"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/TextureRect/Control"]
 layout_mode = 0
-offset_left = 82.0
-offset_top = 81.0
-offset_right = 1095.0
-offset_bottom = 564.0
+offset_left = -457.0
+offset_top = -450.0
+offset_right = 556.0
+offset_bottom = 33.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextureRect/Control/ScrollContainer"]
 unique_name_in_owner = true
@@ -37,12 +53,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 98
-
-[node name="Label" type="Label" parent="CanvasLayer/TextureRect/Control/ScrollContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
-theme_override_font_sizes/font_size = 26
-text = "Title Manger"
 
 [node name="TextureButton" parent="CanvasLayer/TextureRect/Control/ScrollContainer/VBoxContainer" instance=ExtResource("2_83ytx")]
 layout_mode = 2
