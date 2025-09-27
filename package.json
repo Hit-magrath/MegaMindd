@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Hit-magrath/MegaMindd#readme",
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.58.0"
   }
 }
