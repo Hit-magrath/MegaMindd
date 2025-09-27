@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckqyss2blkxji"]
+
+[ext_resource type="Script" uid="uid://b8j4vmv41a4w1" path="res://Main/profile.gd" id="1_335f1"]
+[ext_resource type="Texture2D" uid="uid://cyrftr67whr4a" path="res://Main/background_logo.png" id="1_jp2ae"]
+
+[sub_resource type="Theme" id="Theme_jp2ae"]
+default_font_size = 80
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_335f1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jp2ae")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="CanvasLayer/TextureRect/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_jp2ae")
+theme_override_colors/font_color = Color(0.941176, 0.0196078, 0.160784, 1)
+text = "Sign-Up User"
+
+[node name="EmailField" type="LineEdit" parent="CanvasLayer/TextureRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Enter email"
+
+[node name="PasswordField" type="LineEdit" parent="CanvasLayer/TextureRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Enter password"
+
+[node name="CreateButton" type="Button" parent="CanvasLayer/TextureRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Create Account
+"
