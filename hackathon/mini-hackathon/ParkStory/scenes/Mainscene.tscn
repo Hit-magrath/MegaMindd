@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://duqrt7eg6pp7e"]
+
+[ext_resource type="Script" uid="uid://cgb0a75xk0tuh" path="res://ParkStory/scripts/mainscene.gd" id="1_qklmv"]
+[ext_resource type="PackedScene" uid="uid://c2n8erlb0udu7" path="res://ParkStory/scenes/charactor.tscn" id="2_4dvvg"]
+[ext_resource type="Texture2D" uid="uid://r446d6ob33gt" path="res://ParkStory/assets/ai_gen_boy/boy_wakes_up.png" id="2_qklmv"]
+[ext_resource type="PackedScene" uid="uid://b8rwx5ojxdkuy" path="res://ParkStory/scenes/dialog_ui.tscn" id="3_rnjyy"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_qklmv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qklmv")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="charactor" parent="CanvasLayer2/Control" instance=ExtResource("2_4dvvg")]
+unique_name_in_owner = true
+position = Vector2(-170, 197)
+
+[node name="DialogUI" parent="CanvasLayer2" instance=ExtResource("3_rnjyy")]
+unique_name_in_owner = true

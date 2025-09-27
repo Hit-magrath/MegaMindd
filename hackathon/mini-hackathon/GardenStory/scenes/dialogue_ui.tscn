@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://b83vbx1kytgp2"]
+
+[ext_resource type="Script" uid="uid://ywqqc7n425eb" path="res://GardenStory/scripts/dialogue_ui.gd" id="1_6q285"]
+[ext_resource type="PackedScene" uid="uid://cr0rvch2xg038" path="res://GardenStory/scenes/button.tscn" id="1_dwk8m"]
+
+[sub_resource type="Theme" id="Theme_e0sfr"]
+
+[sub_resource type="Theme" id="Theme_njptv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e0sfr"]
+
+[node name="DialogueUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 1.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6q285")
+
+[node name="ChoiceContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceList" type="VBoxContainer" parent="ChoiceContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Button" parent="ChoiceContainer" instance=ExtResource("1_dwk8m")]
+visible = false
+layout_mode = 2
+
+[node name="DialogueBox" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -111.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_e0sfr")
+
+[node name="DialogueLine" type="RichTextLabel" parent="DialogueBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "“Welcome, brave traveler! To enter this magical realm, you must solve my riddle: ‘I can fly without wings. I can cry without eyes. Wherever I go, darkness flies. What am I?’”"
+
+[node name="SpeakerBox" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -158.0
+offset_right = 204.0
+offset_bottom = -108.0
+grow_vertical = 0
+theme = SubResource("Theme_njptv")
+
+[node name="Polygon2D" type="Polygon2D" parent="SpeakerBox"]
+scale = Vector2(1.405, 1)
+color = Color(0.169925, 0.5433, 0.686647, 1)
+polygon = PackedVector2Array(0, 0, 0, -2, 180, 0, 200, 50, 0, 50)
+
+[node name="Speakername" type="Label" parent="SpeakerBox"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 67.0
+offset_top = 13.0
+offset_right = 107.0
+offset_bottom = 36.0
+text = "Smarty
+"
+label_settings = SubResource("LabelSettings_e0sfr")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+offset_top = -56.0
+offset_right = -11.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="Control"]
+polygon = PackedVector2Array(0, 0, 40, 20, 0, 40)

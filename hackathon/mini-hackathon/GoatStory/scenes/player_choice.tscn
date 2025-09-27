@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsvxa0v2o4gpl"]
+
+[ext_resource type="Theme" uid="uid://dmc5nfwnedng6" path="res://GoatStory/themes/dialogue_theme.tres" id="1_np14s"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(700, 50)
+theme = ExtResource("1_np14s")
+text = "This is the first choice "

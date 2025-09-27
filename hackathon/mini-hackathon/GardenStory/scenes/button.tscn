@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr0rvch2xg038"]
+
+[sub_resource type="Theme" id="Theme_x0h1o"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(450, 55)
+theme = SubResource("Theme_x0h1o")
+text = "this is the first choice"

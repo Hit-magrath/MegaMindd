@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dkwf32gxncgkx"]
+
+[ext_resource type="Texture2D" uid="uid://bjofk0u6iomgb" path="res://GardenStory/assets/sprites/Idle (1).png" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bmqwjqctio027" path="res://GardenStory/assets/sprites/Jump (11).png" id="2_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://dok83bf6ekdf4" path="res://GardenStory/assets/sprites/Run (2).png" id="3_kdubu"]
+[ext_resource type="Texture2D" uid="uid://c2way5bbw4xwr" path="res://GardenStory/assets/sprites/Slide (1).png" id="4_d21ai"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rj586"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": ExtResource("1_0hol4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_q6r6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kdubu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d21ai")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[node name="Character" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-70.0]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(599, 260)
+scale = Vector2(1.07511, 0.911028)
+sprite_frames = SubResource("SpriteFrames_rj586")
+frame = 2
+frame_progress = 0.267978

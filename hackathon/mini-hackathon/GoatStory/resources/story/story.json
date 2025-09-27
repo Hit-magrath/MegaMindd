@@ -1,0 +1,109 @@
+[
+  { "location": "background_one"},
+  { "speaker": "MegaMindd", "text": "The Quest for the Missing Goats — A short interactive scene set in rural KwaZulu-Natal." },
+
+  { "speaker": "MegaMindd", "text": "The sun was just peeking over the hills, painting the sky with colors of pink and orange. Thato, a boy of 14, woke up with a big smile." },
+  { "speaker": "MegaMindd", "text": "It was his job to take the family's three goats to the grazing field. He walked out of his hut and headed to the kraal. But when he looked inside, his smile disappeared. The kraal was empty." },
+  { "speaker": "Sipho", "text": "Haibo, I was ready to greet the goats this morning, but they are gone! I need to ask Gogo if she has seen them. This is not good." },
+ 
+  { "location": "background_two"},
+  { "anchor": "grandmother_clue" },
+  { "speaker": "Sipho", "text": "Gogo! The goats are gone! Have you seen them?" },
+  { "speaker": "Gogo", "text": "Don't you worry, my brave Sipho. I saw them this morning. They were drinking water near the river, and they were eating by the big fig tree." },
+  { "speaker": "MegaMindd", "text": "CLUE: Remember the two locations — the river and the big fig tree." },
+  
+   { "location": "background_three"},
+  { "anchor": "distraction_test" },
+  { "speaker": "MegaMindd", "text": "On the way to the river, your friend Zanele calls out." },
+  { "speaker": "Zanele", "text": "Sipho, come play soccer with us! You worry too much about goats." },
+  { "choices":
+	[
+	  { "text": "Stay focused and go to the river.", "goto": "river_path" },
+	  { "text": "Play soccer with Zanele.", "goto": "play_soccer" }
+	]
+  },
+
+  { "anchor": "play_soccer" },
+  { "speaker": "MegaMindd", "text": "You play soccer and lose valuable time. The sun moves lower." },
+  { "speaker": "MegaMindd", "text": "Time wasted may make finding the goats harder by nightfall." },
+  { "goto": "distraction_test" },
+
+  { "anchor": "river_path" },
+  { "location": "background_four"},
+  { "speaker": "MegaMindd", "text": "You ignore the distraction and head straight to the river." },
+  { "speaker": "MegaMindd", "text": "At the riverbank you look around for goat tracks." },
+  { "goto": "logic_puzzle" },
+
+  { "anchor": "logic_puzzle" },
+ { "location": "background_four"},
+  { "speaker": "MegaMindd", "text": "The tracks split into two: one path goes north toward the hills, the other goes east toward the fig tree." },
+  { "speaker": "MegaMindd", "text": "You recall Gogo said the goats were drinking near the river and eating by the big fig tree." },
+  { "choices":
+	[
+	  { "text": "Go north to the hills.", "goto": "north_path" },
+	  { "text": "Go east to the fig tree.", "goto": "east_path" }
+	]
+  },
+
+  { "anchor": "north_path" },
+  { "speaker": "MegaMindd", "text": "You head north toward the hills. The path is rough and you hear distant sounds of hyenas. You find no goats here." },
+  { "speaker": "logic_puzzle" },
+
+  { "anchor": "east_path" },
+  { "speaker": "MegaMindd", "text": "You walk east toward the fig tree. Nearby you find two goats calmly grazing under the shade." },
+  { "speaker": "Sipho", "text": "There you are! Two of you — I've found you." },
+  { "goto": "discovery" },
+
+  { "anchor": "discovery" },
+ { "location": "background_five"},
+  { "speaker": "MegaMindd", "text": "Now you have two goats, but one is still missing." },
+  { "speaker": "MrDlamini", "text": "I saw one goat earlier near the… hmm… was it the maize field, or by the soccer ground? Wait, maybe it was close to the school?" },
+  { "speaker": "MegaMindd", "text": "Recall test: Gogo's original clues were river and fig tree — the maize field was not mentioned." },
+  { "choices":
+	[
+	  { "text": "Check the maize field.", "goto": "maize_field" },
+	  { "text": "Check the soccer ground.", "goto": "soccer_ground" },
+	  { "text": "Check the school.", "goto": "school_check" }
+	]
+  },
+
+  { "anchor": "maize_field" },
+  { "speaker": "MegaMindd", "text": "You search the maize field but find no goat. You wasted time searching an irrelevant location." },
+  { "goto": "return_home_fail" },
+
+  { "anchor": "soccer_ground" },
+  { "speaker": "MegaMindd", "text": "At the soccer ground there's only kids playing. No goat here." },
+  { "goto": "return_home_fail" },
+
+  { "anchor": "school_check" },
+  { "speaker": "MegaMindd", "text": "You walk to the school and search along the fence." },
+  { "speaker": "MegaMindd", "text": "Sure enough, the last goat is grazing by the fence." },
+  { "goto": "return_home_success" },
+
+  { "anchor": "return_home_fail" },
+  { "speaker": "MegaMindd", "text": "The sun dips lower. You still haven't found the last goat; time is running out." },
+  { "choices":
+	[
+	  { "text": "Keep searching (try the school).", "goto": "school_check" },
+	  { "text": "Return home without the last goat.", "goto": "return_home_partial" }
+	]
+  },
+
+  { "location": "background_six"},
+
+  { "anchor": "return_home_partial" },
+  { "location": "background_six"},
+  { "speaker": "MegaMindd", "text": "You return with two goats. Gogo is worried but proud you tried." },
+  { "speaker": "Gogo", "text": "My heart is heavy, but thank you for bringing them this far, Sipho." },
+  { "goto": "end" },
+
+  { "anchor": "return_home_success" },
+  { "location": "background_six"},
+  { "speaker": "MegaMindd", "text": "You carefully bring all three goats back home as the sun begins to set." },
+  { "speaker": "MegaMindd", "text": "Gogo is waiting and when she sees you she smiles a wide, beautiful smile and gives you a big hug." },
+  { "speaker": "Gogo", "text": "Sipho, my heart is full. Thank you for finding the goats and bringing them home." },
+  { "goto": "end" },
+
+  { "anchor": "end" },
+  { "speaker": "MegaMindd", "text": "Great job, Sipho! You remembered 3 locations, ignored distractions, and solved the tracks puzzle." }
+]

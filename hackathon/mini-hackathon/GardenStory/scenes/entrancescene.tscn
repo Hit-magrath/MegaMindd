@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx53a4mpljf86"]
+
+[ext_resource type="Texture2D" uid="uid://qgoemn1scp21" path="res://GardenStory/assets/mysterious_entrance.jpg" id="1_1a2mu"]
+[ext_resource type="Script" uid="uid://d16nllv552bp4" path="res://GardenStory/scripts/entrancescene.gd" id="1_6k0b0"]
+[ext_resource type="PackedScene" uid="uid://dkwf32gxncgkx" path="res://GardenStory/scenes/character.tscn" id="2_k5k34"]
+[ext_resource type="PackedScene" uid="uid://b83vbx1kytgp2" path="res://GardenStory/scenes/dialogue_ui.tscn" id="3_6k0b0"]
+
+[node name="main_scene" type="Node2D"]
+script = ExtResource("1_6k0b0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 2.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1a2mu")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Character" parent="CanvasLayer2/Control" instance=ExtResource("2_k5k34")]
+unique_name_in_owner = true
+position = Vector2(-675, -392)
+
+[node name="DialogueUI" parent="CanvasLayer2" instance=ExtResource("3_6k0b0")]
+unique_name_in_owner = true
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
