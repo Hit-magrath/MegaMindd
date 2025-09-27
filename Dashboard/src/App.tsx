@@ -6,7 +6,7 @@ import { AchievementsPage } from './components/AchievementsPage';
 import { CodingChallenge } from './components/CodingChallenge';
 import { LogicPuzzle } from './components/LogicPuzzle';
 import { MathGame } from './components/MathGame';
-import { CharacterSelector, Character } from './components/CharacterSelector';
+import { CharacterSelector, Character } from './components/CharacterSelectorPage';
 import { Card, CardContent, CardHeader, CardTitle } from './components/ui/card';
 import { Badge } from './components/ui/badge';
 import { Button } from './components/ui/button';
@@ -138,7 +138,7 @@ export default function App() {
                     </h1>
                   </div>
                   <p className="text-base md:text-lg text-gray-600 mb-4">
-                    Learn coding, logic, and math through fun games!
+                    Learn reading, logic and remembering things through fun games!
                   </p>
                   
                   {/* Character Selection Button - Mobile Friendly */}
