@@ -53,7 +53,7 @@ text = "Home "
 [node name="Polygon2D" type="Polygon2D" parent="CanvasLayer/Control"]
 position = Vector2(-99, 118)
 scale = Vector2(1.405, 1)
-color = Color(0.16862746, 0.5372549, 0.6862745, 0.69411767)
+color = Color(0.168627, 0.537255, 0.686275, 0.694118)
 polygon = PackedVector2Array(-260, -290, 450, -290, 450, 150, -260, 150)
 
 [node name="Control" type="Control" parent="CanvasLayer/Control/Polygon2D"]
@@ -72,51 +72,51 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/Polygon2D/Control"]
 layout_mode = 0
-offset_left = -173.5943
+offset_left = -173.594
 offset_top = -168.0
-offset_right = 14.405701
+offset_right = 14.4057
 offset_bottom = -145.0
 text = "Memory :  "
 
 [node name="attention_label" type="Label" parent="CanvasLayer/Control/Polygon2D/Control"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 174.4484
+offset_left = 174.448
 offset_top = 83.0
-offset_right = 362.44843
+offset_right = 362.448
 offset_bottom = 106.0
 text = "Memory :  "
 
 [node name="Label3" type="Label" parent="CanvasLayer/Control/Polygon2D/Control"]
 layout_mode = 0
-offset_left = -172.17082
+offset_left = -172.171
 offset_top = 82.0
-offset_right = 15.829178
+offset_right = 15.8292
 offset_bottom = 105.0
 text = "Attention"
 
 [node name="reason_label" type="Label" parent="CanvasLayer/Control/Polygon2D/Control"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 175.8719
+offset_left = 175.872
 offset_top = -47.0
-offset_right = 363.8719
+offset_right = 363.872
 offset_bottom = -24.0
 text = "Memory :  "
 
 [node name="Label5" type="Label" parent="CanvasLayer/Control/Polygon2D/Control"]
 layout_mode = 0
-offset_left = -175.01779
+offset_left = -175.018
 offset_top = -49.0
-offset_right = 12.982208
+offset_right = 12.9822
 offset_bottom = -26.0
 text = "Reasoning :  "
 
 [node name="memory_label" type="Label" parent="CanvasLayer/Control/Polygon2D/Control"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 175.8719
+offset_left = 175.872
 offset_top = -177.0
-offset_right = 363.8719
+offset_right = 363.872
 offset_bottom = -154.0
 text = "Memory :  "

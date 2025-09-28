@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckqyss2blkxji"]
 
-[ext_resource type="Script" uid="uid://b8j4vmv41a4w1" path="res://Main/profile.gd" id="1_335f1"]
-[ext_resource type="Texture2D" uid="uid://cyrftr67whr4a" path="res://Main/background_logo.png" id="1_jp2ae"]
+[ext_resource type="Script" uid="uid://d1bv71ketw6h7" path="res://Main/profile.gd" id="1_335f1"]
+[ext_resource type="Texture2D" uid="uid://rv8bfrja6i1v" path="res://Main/background_logo.png" id="1_jp2ae"]
 
 [sub_resource type="Theme" id="Theme_jp2ae"]
 default_font_size = 80

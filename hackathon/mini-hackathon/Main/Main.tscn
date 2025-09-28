@@ -36,7 +36,7 @@ offset_left = -475.0
 offset_top = -551.0
 offset_right = 538.0
 offset_bottom = -515.0
-theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_colors/font_color = Color(0.0126172, 0.0126172, 0.0126172, 1)
 theme_override_font_sizes/font_size = 26
 text = "Title Manger"
 

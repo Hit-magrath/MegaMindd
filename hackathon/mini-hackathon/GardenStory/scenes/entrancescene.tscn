@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d16nllv552bp4" path="res://GardenStory/scripts/entrancescene.gd" id="1_6k0b0"]
 [ext_resource type="PackedScene" uid="uid://dkwf32gxncgkx" path="res://GardenStory/scenes/character.tscn" id="2_k5k34"]
 [ext_resource type="PackedScene" uid="uid://b83vbx1kytgp2" path="res://GardenStory/scenes/dialogue_ui.tscn" id="3_6k0b0"]
-[ext_resource type="PackedScene" uid="uid://c7h586iu5nugg" path="res://ParkStory/scenes/tts_API.tscn" id="5_pvmrp"]
+[ext_resource type="PackedScene" path="res://ParkStory/scenes/tts_API.tscn" id="5_pvmrp"]
 
 [node name="main_scene" type="Node2D"]
 script = ExtResource("1_6k0b0")
