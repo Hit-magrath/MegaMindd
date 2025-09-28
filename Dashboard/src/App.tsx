@@ -3,6 +3,7 @@ import { Navigation } from './components/Navigation';
 import { ExplorePage } from './components/ExplorePage';
 import { ProfilePage } from './components/ProfilePage';
 import { AchievementsPage } from './components/AchievementsPage';
+import LoginPage from './components/LoginPage';
 import { CodingChallenge } from './components/CodingChallenge';
 import { LogicPuzzle } from './components/LogicPuzzle';
 import { MathGame } from './components/MathGame';
@@ -22,6 +23,7 @@ import {
   Crown,
   User,
   Sparkles,
+  Blocks,
   Target
 } from 'lucide-react';
 
@@ -36,7 +38,7 @@ export default function App() {
   const [userProgress, setUserProgress] = useState({
     level: 3,
     totalPoints: 245,
-    badges: ['First Code', 'Logic Master', 'Math Wizard'],
+    badges: ['Memory Master', 'Logic Master', 'Math Wizard'],
     coding: { completed: 8, total: 15, points: 80 },
     logic: { completed: 12, total: 20, points: 120 },
     math: { completed: 9, total: 18, points: 90 }
@@ -143,6 +145,10 @@ export default function App() {
             userProgress={userProgress}
           />
         );
+      case 'login':
+        return (
+          <LoginPage 
+          onLoginSuccess={() => setCurrentView('dashboard')} />);
       default:
         return (
           <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100">
@@ -159,30 +165,6 @@ export default function App() {
                   <p className="text-base md:text-lg text-gray-600 mb-4">
                     Learn reading, logic and remembering things through fun games!
                   </p>
-                  
-                  {/* Character Selection Button - Mobile Friendly */}
-                  <div className="mt-4">
-                    <Button 
-                      onClick={() => setShowCharacterSelector(true)}
-                      variant="outline"
-                      className="bg-white/80 hover:bg-white border-2 border-purple-200 hover:border-purple-300"
-                    >
-                      {selectedCharacter ? (
-                        <div className="flex items-center gap-2">
-                          <span className="text-xl md:text-2xl">{selectedCharacter.emoji}</span>
-                          <span className="hidden sm:inline">Playing as {selectedCharacter.name}</span>
-                          <span className="sm:hidden">{selectedCharacter.name}</span>
-                          <User className="h-4 w-4" />
-                        </div>
-                      ) : (
-                        <div className="flex items-center gap-2">
-                          <User className="h-4 w-4" />
-                          <span className="hidden sm:inline">Choose Your Hero</span>
-                          <span className="sm:hidden">Choose Hero</span>
-                        </div>
-                      )}
-                    </Button>
-                  </div>
                 </div>
 
                 {/* User Progress Card - Mobile Optimized */}
@@ -229,17 +211,8 @@ export default function App() {
                       </div>
                     </div>
                     
-                    {selectedCharacter && (
-                      <div className="mt-4 p-3 bg-white/60 rounded-lg border border-yellow-300">
-                        <div className="flex items-center gap-2 text-sm">
-                          <span className="font-medium text-gray-700">Special Power:</span>
-                          <Badge className="bg-purple-100 text-purple-700 text-xs">
-                            <Zap className="h-3 w-3 mr-1" />
-                            {selectedCharacter.specialPower}
-                          </Badge>
-                        </div>
-                      </div>
-                    )}
+ 
+                    
                   </CardContent>
                 </Card>
 
@@ -277,17 +250,6 @@ export default function App() {
                       <div className="text-xs opacity-90">View your stats</div>
                     </div>
                   </Button>
-                  
-                  <Button 
-                    onClick={() => setShowCharacterSelector(true)}
-                    className="bg-gradient-to-r from-pink-500 to-red-500 hover:from-pink-600 hover:to-red-600 text-white p-4 h-auto"
-                  >
-                    <div className="text-center">
-                      <Target className="h-6 w-6 mx-auto mb-2" />
-                      <div className="font-medium">Change Hero</div>
-                      <div className="text-xs opacity-90">Select character</div>
-                    </div>
-                  </Button>
                 </div>
 
                 {/* Subject Cards - Mobile Optimized */}
@@ -297,9 +259,9 @@ export default function App() {
                         onClick={() => setCurrentView('coding')}>
                     <CardHeader className="text-center pb-4">
                       <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-blue-500 rounded-full flex items-center justify-center mb-3 md:mb-4">
-                        <Code className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                        <Blocks className="h-6 w-6 md:h-8 md:w-8 text-white" />
                       </div>
-                      <CardTitle className="text-blue-700 text-lg md:text-xl">Coding Adventures</CardTitle>
+                      <CardTitle className="text-blue-700 text-lg md:text-xl">Enchanted Garden </CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3 md:space-y-4">
@@ -310,7 +272,7 @@ export default function App() {
                         </div>
                         <Button className="w-full bg-blue-500 hover:bg-blue-600 text-sm md:text-base">
                           <Zap className="h-3 w-3 md:h-4 md:w-4 mr-2" />
-                          Start Coding
+                          See learning journey
                         </Button>
                       </div>
                     </CardContent>
@@ -323,7 +285,7 @@ export default function App() {
                       <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-green-500 rounded-full flex items-center justify-center mb-3 md:mb-4">
                         <Brain className="h-6 w-6 md:h-8 md:w-8 text-white" />
                       </div>
-                      <CardTitle className="text-green-700 text-lg md:text-xl">Logic Puzzles</CardTitle>
+                      <CardTitle className="text-green-700 text-lg md:text-xl">Going to the Park</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3 md:space-y-4">
@@ -334,7 +296,7 @@ export default function App() {
                         </div>
                         <Button className="w-full bg-green-500 hover:bg-green-600 text-sm md:text-base">
                           <Zap className="h-3 w-3 md:h-4 md:w-4 mr-2" />
-                          Solve Puzzles
+                          See learning journey
                         </Button>
                       </div>
                     </CardContent>
@@ -347,7 +309,7 @@ export default function App() {
                       <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-orange-500 rounded-full flex items-center justify-center mb-3 md:mb-4">
                         <Calculator className="h-6 w-6 md:h-8 md:w-8 text-white" />
                       </div>
-                      <CardTitle className="text-orange-700 text-lg md:text-xl">Math Games</CardTitle>
+                      <CardTitle className="text-orange-700 text-lg md:text-xl">Goat Quest</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <div className="space-y-3 md:space-y-4">
@@ -358,7 +320,7 @@ export default function App() {
                         </div>
                         <Button className="w-full bg-orange-500 hover:bg-orange-600 text-sm md:text-base">
                           <Zap className="h-3 w-3 md:h-4 md:w-4 mr-2" />
-                          Play Math
+                          See learning journey
                         </Button>
                       </div>
                     </CardContent>

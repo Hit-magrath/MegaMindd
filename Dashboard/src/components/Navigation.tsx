@@ -5,7 +5,8 @@ import {
   Home, 
   Search, 
   User, 
-  Trophy, 
+  Trophy,
+  LogIn, 
   Menu,
   X,
   Crown
@@ -45,7 +46,8 @@ export function Navigation({
     { id: 'dashboard', label: 'Home', icon: Home },
     { id: 'search', label: 'Explore', icon: Search },
     { id: 'profile', label: 'Profile', icon: User },
-    { id: 'achievements', label: 'Achievements', icon: Trophy }
+    { id: 'achievements', label: 'Achievements', icon: Trophy },
+    { id: 'login', label: 'Login', icon: LogIn }
   ];
 
   return (

@@ -13,6 +13,10 @@ import {
   Code,
   Brain,
   Calculator,
+  Blocks,
+  Building,
+  Building2,
+  Component,
   Edit,
   Settings
 } from 'lucide-react';
@@ -42,16 +46,16 @@ interface ProfilePageProps {
 export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect }: ProfilePageProps) {
   const stats = [
     {
-      label: 'Coding Challenges',
+      label: 'Grade 1 Challenges',
       value: `${userProgress.coding.completed}/${userProgress.coding.total}`,
       percentage: (userProgress.coding.completed / userProgress.coding.total) * 100,
       points: userProgress.coding.points,
-      icon: Code,
+      icon: Blocks,
       color: 'text-blue-600',
       bgColor: 'bg-blue-100'
     },
     {
-      label: 'Logic Puzzles',
+      label: 'Grade 2 Challenges',
       value: `${userProgress.logic.completed}/${userProgress.logic.total}`,
       percentage: (userProgress.logic.completed / userProgress.logic.total) * 100,
       points: userProgress.logic.points,
@@ -60,7 +64,7 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
       bgColor: 'bg-green-100'
     },
     {
-      label: 'Math Games',
+      label: 'Grade 3 Challenges',
       value: `${userProgress.math.completed}/${userProgress.math.total}`,
       percentage: (userProgress.math.completed / userProgress.math.total) * 100,
       points: userProgress.math.points,
@@ -82,7 +86,7 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
   const recentActivity = [
     { activity: 'Completed Pattern Puzzle #5', points: 25, time: '2 hours ago', type: 'logic' },
     { activity: 'Solved Math Adventure Level 3', points: 40, time: '1 day ago', type: 'math' },
-    { activity: 'Mastered Coding Block Sequence', points: 50, time: '2 days ago', type: 'coding' },
+    { activity: 'Answered multiple choice questions correctly', points: 50, time: '2 days ago', type: 'coding' },
     { activity: 'Earned "Logic Master" badge', points: 100, time: '3 days ago', type: 'achievement' }
   ];
 
@@ -112,8 +116,8 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
                       <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center mb-4">
                         <User className="h-12 w-12 text-gray-400" />
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-700">Choose Your Hero</h2>
-                      <p className="text-gray-600 text-sm">Select a character to start your learning journey</p>
+                      <h2 className="text-2xl font-bold text-gray-700">Bahumi Pilane</h2>
+                      <p className="text-gray-600 text-sm">Keep track of your child's learning journey</p>
                     </div>
                   )}
                   
@@ -138,16 +142,6 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
                     </div>
                   </div>
                   
-                  <div className="flex flex-col gap-2">
-                    <Button onClick={onCharacterSelect} variant="outline" size="sm">
-                      <Edit className="h-4 w-4 mr-2" />
-                      Change Hero
-                    </Button>
-                    <Button variant="outline" size="sm">
-                      <Settings className="h-4 w-4 mr-2" />
-                      Settings
-                    </Button>
-                  </div>
                 </div>
               </CardContent>
             </Card>
