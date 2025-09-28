@@ -27,6 +27,10 @@ func _ready() -> void:
 	#pass
 	
 func _input(event: InputEvent) -> void:
+	if dialog_index >= dialog_lines.size():
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
+		return
+	
 	var line = dialog_lines[dialog_index]
 	var has_choise = line.has("choices")
 	if event.is_action_pressed("next_line") and not has_choise:
@@ -40,9 +44,19 @@ func _input(event: InputEvent) -> void:
 
 	
 func process_current_line():
+	if dialog_index >= dialog_lines.size():
+		print("End of dialog reached")
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
+		return
+	
 	var line = dialog_lines[dialog_index]
 	#check if it's the end of the scene
 	if line.has("next_scene"):
+		return
+		
+	if line.has("end"):
+		tts_api.stop()
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
 		return
 	
 	

@@ -31,6 +31,7 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	# Make sure we don't go out of bounds
 	if dialog_index >= dialog_lines.size():
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
 		return
 		
 	var line = dialog_lines[dialog_index]
@@ -48,11 +49,13 @@ func advance_dialogue():
 		dialog_index += 1
 		process_current_line()
 	else:
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
 		print("End of story reached!")
 
 func process_current_line():
 	if dialog_index >= dialog_lines.size():
-		print("End of dialog reached")
+		
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
 		return
 	
 	var line = dialog_lines[dialog_index]
@@ -88,6 +91,11 @@ func process_current_line():
 	elif line.has("anchor"):
 		# Skip anchor declarations
 		advance_dialogue()
+		return
+		
+	if line.has("end"):
+		tts_api.stop()
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
 		return
 	
 	elif line.has("choices"):

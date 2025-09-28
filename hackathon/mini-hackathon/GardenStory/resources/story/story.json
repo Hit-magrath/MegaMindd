@@ -95,5 +95,8 @@
 	
 	{"anchor": "correct_lesson"},
 	{"speaker": "Owl", "text": "Well said! You have grown in attention, memory, and reasoning. Wear this flower crown as a symbol of your achievements!"},
-	{"speaker": "Narrator", "text": "And so, the adventurer left the enchanted garden, their heart filled with joy and newfound wisdom, ready to share their tale with the world."}
+	{"speaker": "Narrator", "text": "And so, the adventurer left the enchanted garden, their heart filled with joy and newfound wisdom, ready to share their tale with the world."},
+	
+	{ "end": "yes" },
+
 ]

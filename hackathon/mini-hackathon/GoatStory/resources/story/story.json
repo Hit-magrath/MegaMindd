@@ -105,5 +105,7 @@
   { "goto": "end" },
 
   { "anchor": "end" },
-  { "speaker": "MegaMindd", "text": "Great job, Sipho! You remembered 3 locations, ignored distractions, and solved the tracks puzzle." }
+  { "speaker": "MegaMindd", "text": "Great job, Sipho! You remembered 3 locations, ignored distractions, and solved the tracks puzzle." },
+  { "end": "yes" },
+
 ]

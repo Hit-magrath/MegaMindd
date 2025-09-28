@@ -226,6 +226,7 @@
 	{"speaker" : "Liz" , "text" : " Great job. Now Zuko knows how to stay safe and healthy in the sun too."},
 	{"speaker" : "Liz" , "text" : " It looks like Zuko quickly went to grab their own cap and water after listening to your smart advice!"},
 	{"speaker" : "Liz" , "text" : " Go enjoy your day at the playground with your friends!"},
-
+	
+	{"end" : "yes"},
 
 ]

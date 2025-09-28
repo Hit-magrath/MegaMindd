@@ -32,7 +32,8 @@ func _input(event):
 
 func process_current_line():
 	if dialogue_index >= dialogue_lines.size() or dialogue_index < 0:
-		printerr("Error: dialogue_index out of bounds: ", dialogue_index)
+		print("End of dialog reached")
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
 		return
 	
 	#Extract current line
@@ -61,6 +62,12 @@ func process_current_line():
 		dialogue_index += 1
 		process_current_line()
 		return
+		
+	if line.has("end"):
+		tts_api.stop()
+		get_tree().change_scene_to_file("res://end_story/scenes/end_scene.tscn")
+		return
+		
 	#Check if this is a goto command
 	if line.has("goto"):
 		dialogue_index = get_anchor_position(line["goto"])
