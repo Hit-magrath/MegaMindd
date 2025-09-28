@@ -1,0 +1,10 @@
+[
+  {
+	"name": "Player1",
+	"avatar_path": "res://avatars/avatar1.png"
+  },
+  {
+	"name": "Player2",
+	"avatar_path": "res://avatars/avatar2.png"
+  }
+]

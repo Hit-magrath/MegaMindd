@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://q5iwdy78bsen"]
+[gd_scene load_steps=4 format=3 uid="uid://q5iwdy78bsen"]
 
 [ext_resource type="Texture2D" uid="uid://rv8bfrja6i1v" path="res://Main/background_logo.png" id="1_1n3ht"]
+[ext_resource type="Script" uid="uid://cr6cctl6ar5s1" path="res://select_profile/scripts/select_profile.gd" id="1_h0gw0"]
+[ext_resource type="PackedScene" uid="uid://c2x1v2l11v66w" path="res://select_profile/scenes/ProfileCard.tscn" id="3_3cw63"]
 
-[node name="SelectProfile" type="Node2D"]
+[node name="SelectProfile" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h0gw0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -15,29 +20,40 @@ grow_vertical = 2
 texture = ExtResource("1_1n3ht")
 
 [node name="Control" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control"]
-layout_mode = 0
-offset_left = -483.0
-offset_top = -184.0
-offset_right = 530.0
-offset_bottom = 299.0
+[node name="ProfileCard" parent="CanvasLayer/Control" instance=ExtResource("3_3cw63")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -124.0
+offset_top = -98.0
+offset_right = -124.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/ScrollContainer"]
+[node name="Button" type="Button" parent="CanvasLayer"]
 unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_constants/separation = 98
+offset_left = 290.0
+offset_top = 538.0
+offset_right = 821.0
+offset_bottom = 612.0
+text = "add a profile"
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
