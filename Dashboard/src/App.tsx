@@ -36,12 +36,12 @@ export default function App() {
   const [showCharacterSelector, setShowCharacterSelector] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [userProgress, setUserProgress] = useState({
-    level: 3,
-    totalPoints: 245,
-    badges: ['Memory Master', 'Logic Master', 'Math Wizard'],
-    coding: { completed: 8, total: 15, points: 80 },
-    logic: { completed: 12, total: 20, points: 120 },
-    math: { completed: 9, total: 18, points: 90 }
+    level: 1,
+    totalPoints: 0,
+    badges: [],
+    coding: { completed: 0, total: 15, points: 80 },
+    logic: { completed: 0, total: 20, points: 120 },
+    math: { completed: 0, total: 18, points: 90 }
   });
 
   const [data, setData] = useState<any[]>([]);
