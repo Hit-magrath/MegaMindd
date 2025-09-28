@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Progress } from './ui/progress';
+// import { useCurrentUserProfile } from '../hooks/useProfile';
 import { 
   User, 
   Star, 
@@ -14,9 +15,6 @@ import {
   Brain,
   Calculator,
   Blocks,
-  Building,
-  Building2,
-  Component,
   Edit,
   Settings
 } from 'lucide-react';
@@ -47,7 +45,7 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
   const stats = [
     {
       label: 'Grade 1 Challenges',
-      value: `${userProgress.coding.completed}/${userProgress.coding.total}`,
+      value: `0/${userProgress.coding.total}`,
       percentage: (userProgress.coding.completed / userProgress.coding.total) * 100,
       points: userProgress.coding.points,
       icon: Blocks,
@@ -56,7 +54,7 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
     },
     {
       label: 'Grade 2 Challenges',
-      value: `${userProgress.logic.completed}/${userProgress.logic.total}`,
+      value: `0/${userProgress.logic.total}`,
       percentage: (userProgress.logic.completed / userProgress.logic.total) * 100,
       points: userProgress.logic.points,
       icon: Brain,
@@ -65,7 +63,7 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
     },
     {
       label: 'Grade 3 Challenges',
-      value: `${userProgress.math.completed}/${userProgress.math.total}`,
+      value: `0/${userProgress.math.total}`,
       percentage: (userProgress.math.completed / userProgress.math.total) * 100,
       points: userProgress.math.points,
       icon: Calculator,
@@ -75,21 +73,56 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
   ];
 
   const achievements = [
-    { name: 'First Steps', description: 'Complete your first challenge', earned: true, rarity: 'common' },
-    { name: 'Code Master', description: 'Complete 10 coding challenges', earned: true, rarity: 'rare' },
-    { name: 'Logic Guru', description: 'Solve 15 logic puzzles', earned: true, rarity: 'rare' },
-    { name: 'Math Wizard', description: 'Complete 12 math games', earned: true, rarity: 'epic' },
-    { name: 'Speed Runner', description: 'Complete 5 challenges in under 2 minutes', earned: false, rarity: 'legendary' },
-    { name: 'Perfect Score', description: 'Get 100% on 3 consecutive challenges', earned: false, rarity: 'legendary' }
+    { name: 'First Steps', description: 'Complete your first challenge', earned: false, rarity: 'common' },
+    // { name: 'Code Master', description: 'Complete 10 coding challenges', earned: true, rarity: 'rare' },
+    // { name: 'Logic Guru', description: 'Solve 15 logic puzzles', earned: true, rarity: 'rare' },
+    // { name: 'Math Wizard', description: 'Complete 12 math games', earned: true, rarity: 'epic' },
+    // { name: 'Speed Runner', description: 'Complete 5 challenges in under 2 minutes', earned: false, rarity: 'legendary' },
+    // { name: 'Perfect Score', description: 'Get 100% on 3 consecutive challenges', earned: false, rarity: 'legendary' }
   ];
 
   const recentActivity = [
-    { activity: 'Completed Pattern Puzzle #5', points: 25, time: '2 hours ago', type: 'logic' },
-    { activity: 'Solved Math Adventure Level 3', points: 40, time: '1 day ago', type: 'math' },
-    { activity: 'Answered multiple choice questions correctly', points: 50, time: '2 days ago', type: 'coding' },
-    { activity: 'Earned "Logic Master" badge', points: 100, time: '3 days ago', type: 'achievement' }
+    // { activity: 'Completed Pattern Puzzle #5', points: 25, time: '2 hours ago', type: 'logic' },
+    // { activity: 'Solved Math Adventure Level 3', points: 40, time: '1 day ago', type: 'math' },
+    // { activity: 'Answered multiple choice questions correctly', points: 50, time: '2 days ago', type: 'coding' },
+    // { activity: 'Earned "Logic Master" badge', points: 100, time: '3 days ago', type: 'achievement' }
   ];
 
+  // const { profile, loading, error, refetchProfile } = useCurrentUserProfile();
+  // if (loading) {
+  //   return <div>Loading profile...</div>;
+  // };
+  
+  // if (error) {
+  //   return (
+  //     <div>
+  //       <h3>Error Loading Profile</h3>
+  //       <p>{error}</p>
+  //       <button 
+  //         onClick={refetchProfile}
+  //         style={{
+  //           padding: '10px 20px',
+  //           backgroundColor: '#007bff',
+  //           color: 'white',
+  //           border: 'none',
+  //           borderRadius: '4px',
+  //           cursor: 'pointer'
+  //         }}
+  //       >
+  //         Try Again
+  //       </button>
+  //     </div>
+  //   );
+  // }
+
+  // if (!profile) {
+  //   return (
+  //     <div>
+  //     <h3>Profile Not Found</h3>
+  //     <p>No profile information available</p>
+  //     </div>
+  //   );
+  // }
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100">
       <div className="p-4 md:pl-72">
@@ -116,27 +149,27 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
                       <div className="w-24 h-24 rounded-full bg-gray-200 flex items-center justify-center mb-4">
                         <User className="h-12 w-12 text-gray-400" />
                       </div>
-                      <h2 className="text-2xl font-bold text-gray-700">Bahumi Pilane</h2>
+                      <h2 className="text-2xl font-bold text-gray-700">Welcome, Bahumi Pilane! 🎉</h2>
                       <p className="text-gray-600 text-sm">Keep track of your child's learning journey</p>
                     </div>
                   )}
                   
                   <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                     <div>
-                      <div className="text-3xl font-bold text-purple-600">Level {userProgress.level}</div>
+                      <div className="text-3xl font-bold text-purple-600">Level 1</div>
                       <div className="text-sm text-gray-600">Current Level</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-pink-600">{userProgress.totalPoints}</div>
+                      <div className="text-3xl font-bold text-pink-600">0</div>
                       <div className="text-sm text-gray-600">Total Points</div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold text-blue-600">{userProgress.badges.length}</div>
+                      <div className="text-3xl font-bold text-blue-600">0</div>
                       <div className="text-sm text-gray-600">Badges</div>
                     </div>
                     <div>
                       <div className="text-3xl font-bold text-green-600">
-                        {userProgress.coding.completed + userProgress.logic.completed + userProgress.math.completed}
+                        0
                       </div>
                       <div className="text-sm text-gray-600">Completed</div>
                     </div>
@@ -272,14 +305,14 @@ export function ProfilePage({ selectedCharacter, userProgress, onCharacterSelect
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2">
+                  {/* <div className="flex flex-wrap gap-2">
                     {userProgress.badges.map((badge, index) => (
                       <Badge key={index} className="bg-yellow-100 text-yellow-800 border-yellow-300">
                         <Trophy className="h-3 w-3 mr-1" />
                         {badge}
                       </Badge>
                     ))}
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </div>

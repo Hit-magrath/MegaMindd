@@ -49,7 +49,7 @@ export default function App() {
   React.useEffect(() => {
     async function loadData() {
       const { data, error } = await supabase
-        .from('users')
+        .from('profiles')
         .select('*');
       if (error) {
         console.error('Error fetching data:', error);

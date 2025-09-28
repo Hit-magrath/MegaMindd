@@ -3,7 +3,7 @@ import { supabase } from './supabaseClient'
 
 export async function fetchTasks() {
   const { data, error } = await supabase
-    .from('tasks')
+    .from('profiles')
     .select('*')
 
   if (error) {
